@@ -1,0 +1,34 @@
+﻿@model Modelo.USUARIO
+@{
+    ViewBag.Title = "VerUsuario";
+}
+
+
+<h2>Ver Usuario</h2>
+
+<ol class="breadcrumb">
+    <li><a href="~//Home/Usuario">Usuarios</a></li>
+    <li class="active">@Model.NOMBRE</li>
+</ol>
+<!--idtipousuario,idusuario,password,nombre,apellidos,email,estado-->
+<div class="panel panel-default">
+    <div class="panel-heading">Información del Usuario</div>
+    <div class="panel-body">
+        <dl class="dl-horizontal">
+            <dt>ID</dt>
+            <dd>@Model.IDTIPOUSUARIO</dd>
+            <dt>NOMBRE</dt>
+            <dd>@Model.IDUSUARIO</dd>
+            <dt>DESCRIPCION</dt>
+            <dd>@Model.NOMBRE</dd>
+            <dt>PRECIO</dt>
+            <dd>@Model.APELLIDOS</dd>
+            <dt>STOCK</dt>
+            <dd>@Model.EMAIL</dd>
+            <dt>PORTADA</dt>
+            <dd>@Model.ESTADO</dd>
+        </dl>
+    </div>
+
+</div>
+

@@ -1,0 +1,39 @@
+﻿@model List<Modelo.USUARIO>
+@{
+    ViewBag.Title = "Usuario";
+}
+
+
+<h2 class="page-header">USUARIO</h2>
+
+<!--idtipousuario,idusuario,password,nombre,apellidos,email,estado-->
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width:50px;">Tipo</th>
+            <th style="width:50px;">Id</th>
+            <th style="width:200px;">Nombre</th>
+            <th style="width:200px;">Apellidos</th>
+            <th style="width:200px;">Email</th>
+            <th style="width:50px;">Estado</th>
+            <th style="width:50px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model)
+            {
+            <tr>
+                <th>@(m.IDTIPOUSUARIO)</th>
+                <th>@(m.IDUSUARIO)</th>
+                <th>@(m.NOMBRE)</th>
+                <th>@(m.APELLIDOS)</th>
+                <th>@(m.EMAIL)</th>
+                <th>@(m.ESTADO == "A" ? "Activo" : "Inactivo")</th>
+
+                <th><a href="~/home/verusuario/@m.IDUSUARIO" class="btn btn-warning">Visualizar</a></th>
+            </tr>
+        }
+    </tbody>
+
+</table>
+

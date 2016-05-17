@@ -1,0 +1,31 @@
+﻿@model List<Modelo.TIPO_USUARIO>
+@{
+    ViewBag.Title = "TipoUsuario";
+}
+
+<h2 class="page-header">TipoUsuario</h2>
+<!--idtipousuario, nombre, estado-->
+
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width:50px;">Id</th>
+            <th style="width:200px;">Nombre</th>
+            <th style="width:50px;">Estado</th>
+            <th style="width:50px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model)
+            {
+            <tr>
+                <th>@(m.IDTIPOUSUARIO)</th>
+                <th>@(m.NOMBRE)</th>
+                <th>@(m.ESTADO == "A" ? "Activo" : "Inactivo")</th>
+
+                <th><a href="~/Home/VerTipoUuario/@m.IDTIPOUSUARIO" class="btn btn-warning">Visualizar</a></th>
+            </tr>
+        }
+    </tbody>
+
+</table>

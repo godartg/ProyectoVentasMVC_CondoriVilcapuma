@@ -1,0 +1,44 @@
+﻿@model List<Modelo.PRODUCTO>
+@{
+    ViewBag.Title = "Productos";
+}
+<h2 class="page-header">Productos</h2>
+
+<!--idcategoria,nombre,descripcion,precio,stock,portada,importancia,imagen,estado-->
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width:50px;">Id</th>
+            <th style="width:200px;">Nombre</th>
+            <th style="width:200px;">Descripcion</th>
+            <th style="width:200px;">Precio</th>
+            <th style="width:200px;">Stock</th>
+            <!--<th><th style="width:200px;">Portada</th>
+            <th style="width:200px;">Importancia</th>
+            <th style="width:200px;">Imagen</th>-->
+            <th style="width:50px;">Estado</th>
+            <th style="width:50px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model)
+            {
+            <tr>
+                <th>@(m.IDPRODUCTO)</th>
+                <th>@(m.NOMBRE)</th>
+                <th>@(m.DESCRIPCION)</th>
+                <th>@(m.PRECIO)</th>
+                <th>@(m.STOCK)</th>
+                <!--<th>@(m.PORTADA)</th>
+                <th>@(m.IMPORTANCIA)</th>
+                <th>@(m.IMAGEN)</th>-->
+                <th>@(m.ESTADO == "A" ? "Activo" : "Inactivo")</th>
+
+                <th><a href="~/home/verproducto/@m.IDPRODUCTO" class="btn btn-warning">Visualizar</a></th>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+

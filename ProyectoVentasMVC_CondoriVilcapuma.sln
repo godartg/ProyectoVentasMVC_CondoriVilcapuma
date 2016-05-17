@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoVentasMVC_CondoriVilcapuma", "ProyectoVentasMVC_CondoriVilcapuma\ProyectoVentasMVC_CondoriVilcapuma.csproj", "{DA3900C1-0D4D-4F0C-B32C-5823575BE219}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{D908450B-DBC0-4DFF-BF35-E14903CB4921}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DA3900C1-0D4D-4F0C-B32C-5823575BE219}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA3900C1-0D4D-4F0C-B32C-5823575BE219}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA3900C1-0D4D-4F0C-B32C-5823575BE219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D908450B-DBC0-4DFF-BF35-E14903CB4921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D908450B-DBC0-4DFF-BF35-E14903CB4921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D908450B-DBC0-4DFF-BF35-E14903CB4921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D908450B-DBC0-4DFF-BF35-E14903CB4921}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,38 @@
+﻿@model Modelo.PRODUCTO
+@{
+    ViewBag.Title = "VerProducto";
+}
+
+<h2>Ver Producto</h2>
+
+<ol class="breadcrumb">
+    <li><a href="~//Home/Productos">Productos</a></li>
+    <li class="active">@Model.NOMBRE</li>
+</ol>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Información del Producto</div>
+    <div class="panel-body">
+        <dl class="dl-horizontal">
+            <dt>ID</dt>
+            <dd>@Model.IDPRODUCTO</dd>
+            <dt>NOMBRE</dt>
+            <dd>@Model.NOMBRE</dd>
+            <dt>DESCRIPCION</dt>
+            <dd>@Model.DESCRIPCION</dd>
+            <dt>PRECIO</dt>
+            <dd>@Model.PRECIO</dd>
+            <dt>STOCK</dt>
+            <dd>@Model.STOCK</dd>
+            <dt>PORTADA</dt>
+            <dd>@Model.PORTADA</dd>
+            <dt>IMPORTANCIA</dt>
+            <dd>@Model.IMPORTANCIA</dd>
+            <dt>IMAGEN</dt>
+            <dd>@Model.IMAGEN</dd>
+        </dl>
+    </div>
+
+</div>
+
+

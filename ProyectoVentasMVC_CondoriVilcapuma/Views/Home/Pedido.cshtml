@@ -1,0 +1,30 @@
+﻿}
+
+<h2 class="page-header">Pedido</h2>
+<!--idpedido, fecha,estado,idusuario-->
+
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width:50px;">Id</th>
+            <th style="width:200px;">Fecha</th>
+            <th style="width:50px;">Estado</th>
+            <th style="width:50px;">Usuario</th>
+            <th style="width:50px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model)
+            {
+            <tr>
+                <th>@(m.IDPEDIDO)</th>
+                <th>@(m.FECHA)</th>
+                <th>@(m.ESTADO == "A" ? "Activo" : "Inactivo")</th>
+                <th>@(m.IDUSUARIO)</th>
+
+                <th><a href="~/Home/VerPedido/@m.IDPEDIDO" class="btn btn-warning">Visualizar</a></th>
+            </tr>
+        }
+    </tbody>
+
+</table>

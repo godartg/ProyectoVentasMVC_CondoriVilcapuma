@@ -1,0 +1,61 @@
+﻿@model Modelo.PEDIDO
+@{
+    ViewBag.Title = "VerPedido";
+}
+
+<h2>Ver Pedido</h2>
+<!--idpedido, fecha,estado,idusuario-->
+<ol class="breadcrumb">
+    <li><a href="~/Home/Pedido">Pedido</a></li>
+    <li class="active">@Model.IDPEDIDO</li>
+</ol>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Información del pedido</div>
+    <div class="panel-body">
+        <dl class="dl-horizontal">
+            <dt>ID</dt>
+            <dd>@Model.IDPEDIDO</dd>
+            <dt>FECHA</dt>
+            <dd>@Model.FECHA</dd>
+            <dt>ESTADO</dt>
+            <dd>@Model.ESTADO</dd>
+            <dt>USUARIO</dt>
+            <dd>@Model.IDUSUARIO</dd>
+        </dl>
+    </div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">Pedidos</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="width:50px;">Id</th>
+                <th style="width:200px;">Producto</th>
+                <th style="width:200px;">Precio</th>
+                <th style="width:50px;">Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--idpedido,idproducto,precio,cantidad-->
+            @foreach (var p in Model.DETALLE_PEDIDO)
+            {
+                <tr>
+                    <th>@(p.IDPEDIDO)</th>
+                    <th>@(p.IDPRODUCTO)</th>
+                    <th>@(p.PRECIO)</th>
+                    <th>@(p.CANTIDAD)</th>
+
+                </tr>
+            }
+        </tbody>
+
+    </table>
+
+</div>
+
+
+

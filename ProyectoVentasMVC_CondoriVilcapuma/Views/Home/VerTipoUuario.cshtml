@@ -1,0 +1,58 @@
+﻿@model Modelo.TIPO_USUARIO
+@{
+    ViewBag.Title = "VerTipoUuario";
+}
+
+<h2>VerTipoUuario</h2>
+
+<ol class="breadcrumb">
+    <li><a href="~/Home/TipoUsuario">Tipo usuario</a></li>
+    <li class="active">@Model.NOMBRE</li>
+</ol>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Información de la Tipo usuario</div>
+    <div class="panel-body">
+        <dl class="dl-horizontal">
+            <dt>ID</dt>
+            <dd>@Model.IDTIPOUSUARIO</dd>
+            <dt>NOMBRE</dt>
+            <dd>@Model.NOMBRE</dd>
+            <dt>ESTADO</dt>
+            <dd>@Model.ESTADO</dd>
+        </dl>
+    </div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">Productos</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="width:50px;">Id</th>
+                <th style="width:200px;">Nombre</th>
+                <th style="width:200px;">Nombre</th>
+                <th style="width:50px;">Apellido</th>
+                <th style="width:50px;">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model.USUARIO)
+            {
+                <tr>
+                    <th>@(p.IDUSUARIO)</th>
+                    <th>@(p.NOMBRE)</th>
+                    <th>@(p.APELLIDOS)</th>
+                    <th>@(p.EMAIL)</th>
+
+                </tr>
+            }
+        </tbody>
+
+    </table>
+
+</div>
+
+
